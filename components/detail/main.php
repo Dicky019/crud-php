@@ -1,4 +1,11 @@
-<?php include '../components/header.php'; ?>
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="http://localhost/crud-php/" class="flex items-center">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kampus Toraja</span>
+        </a>
+    </div>
+</nav>
 
 <center class="my-8">
     <img class="w-full h-[500px] object-cover rounded-lg my-4" src="<?php echo 'http://localhost/crud-php/rest-api/' . $data["data"]['image'] ?>" alt="">
