@@ -25,12 +25,12 @@ $data = json_decode($response, true);
     if ($data == null) {
         echo 'Permintaan API gagal.';
     } else {
-        if (isset($data["data"]) || $data['success'] > 0) {
+        // if (isset($data["data"]) || $data['success'] > 0) {
             // Menampilkan data
             include '../components/admin/main.php';
-        } else {
-            include '../components/empty.php';
-        }
+        // } else {
+        //     include '../components/empty.php';
+        // }
     }
     ?>
 </body>
