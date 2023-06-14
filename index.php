@@ -1,6 +1,7 @@
 <?php
 // Mengirim permintaan HTTP ke API
-$apiUrl = "http://localhost:8888/crud-php/rest-api/read.php"; // Ubah sesuai dengan URL API Anda
+$post_title = $_GET['title'];
+$apiUrl = $post_title != null ? "http://localhost:8888/crud-php/rest-api/read.php?title=$post_title" :  "http://localhost:8888/crud-php/rest-api/read.php" ; // Ubah sesuai dengan URL API Anda
 $response = file_get_contents($apiUrl);
 
 // Mendekode data JSON yang diterima
@@ -22,7 +23,7 @@ $data = json_decode($response, true);
 <body class="max-w-screen-xl items-center justify-between mx-auto my-4">
 
     <?php
-    // echo $apiUrl;
+    // echo $post_title;
     if ($data == null) {
         echo 'Permintaan API gagal.';
     } else {

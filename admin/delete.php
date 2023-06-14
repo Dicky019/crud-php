@@ -24,6 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Menampilkan pesan hasil penghapusan
     // echo $result;
 
-    header('Location: index.php');
+    header('Location: index.php?id=' . $id);
     exit;
 }

@@ -19,6 +19,7 @@ require 'database.php';
 $database = new Database();
 $conn = $database->dbConnection();
 $post_id = null;
+$post_title = null;
 
 if (isset($_GET['id'])) {
     $post_id = filter_var($_GET['id'], FILTER_VALIDATE_INT, [
@@ -27,6 +28,9 @@ if (isset($_GET['id'])) {
             'min_range' => 1
         ]
     ]);
+}
+if (isset($_GET['title'])) {
+    $post_title = $_GET['title'];
 }
 
 try {
@@ -44,6 +48,19 @@ try {
             $data = $stmt->fetch(PDO::FETCH_ASSOC);
         } else {
             $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        if ($post_title != null) {
+            $searchResults = [];
+
+            // Melakukan pencarian berdasarkan judul artikel
+            foreach ($data as $article) {
+                if (strpos(strtolower($article['title']), strtolower($post_title)) !== false) {
+                    $searchResults[] = $article;
+                }
+            }
+
+            $data = $searchResults;
         }
 
         echo json_encode([

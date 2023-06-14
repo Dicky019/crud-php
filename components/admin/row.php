@@ -13,10 +13,10 @@
     </td>
     <td class="px-6 py-4 flex gap-4">
 
-        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+        <a href="http://localhost:8888/crud-php/admin/edit?id=<?php echo $kampus['id'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
         <form method="POST" action="delete.php">
             <input type="number" value="<?php echo $kampus['id'] ?>" name="id" id="id" hidden>
-            <button type="submit" href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
+            <button type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
         </form>
         <!-- <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a> -->
     </td>

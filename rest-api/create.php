@@ -31,7 +31,7 @@ $conn = $database->dbConnection();
 
 if (!isset($_POST["title"]) || !isset($_POST["body"]) || !isset($_FILES['image']['name'])) :
     echo json_encode([
-        'success' => $data,
+        'success' => 0,
         'message' => 'Please fill all the fields | title, body, image.',
     ]);
     exit;
