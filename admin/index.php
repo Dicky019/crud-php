@@ -19,6 +19,7 @@ $data = json_decode($response, true);
 </head>
 
 <body class="max-w-screen-xl items-center justify-between mx-auto my-4">
+
     <?php
     // echo $apiUrl;
     if ($data == null) {
