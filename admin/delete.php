@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dataJson = json_encode($data);
 
     // Membuat permintaan DELETE ke API
-    $apiUrl = 'http://localhost:8888/crud-php/rest-api/delete.php'; // Ubah sesuai dengan URL API Anda
+    $apiUrl = 'http://localhost/crud-php/rest-api/delete.php'; // Ubah sesuai dengan URL API Anda
     $options = [
         'http' => [
             'method' => 'DELETE',

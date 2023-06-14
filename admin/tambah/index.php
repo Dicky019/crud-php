@@ -29,7 +29,7 @@
                 formData.append('image', image);
 
                 $.ajax({
-                    url: 'http://localhost:8888/crud-php/rest-api/create.php',
+                    url: 'http://localhost/crud-php/rest-api/create.php',
                     type: 'POST',
                     data: formData,
                     contentType: false,
