@@ -1,6 +1,6 @@
 <?php
 // Mengirim permintaan HTTP ke API
-$apiUrl = "http://localhost/crud-php/rest-api/read.php"; // Ubah sesuai dengan URL API Anda
+$apiUrl = "https://crud-php-production.up.railway.app/rest-api/read.php"; // Ubah sesuai dengan URL API Anda
 $response = file_get_contents($apiUrl);
 
 // Mendekode data JSON yang diterima

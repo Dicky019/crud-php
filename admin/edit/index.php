@@ -2,7 +2,7 @@
 // Mengirim permintaan HTTP ke API
 $post_id = $_GET['id'];
 
-$apiUrl = "http://localhost/crud-php/rest-api/read.php" . "?id=$post_id"; // Ubah sesuai dengan URL API Anda
+$apiUrl = "https://crud-php-production.up.railway.app/rest-api/read.php" . "?id=$post_id"; // Ubah sesuai dengan URL API Anda
 $response = file_get_contents($apiUrl);
 
 // Mendekode data JSON yang diterima
@@ -42,7 +42,7 @@ $data = json_decode($response, true);
                 formData.append('image', image);
 
                 $.ajax({
-                    url: 'http://localhost/crud-php/rest-api/update.php',
+                    url: 'https://crud-php-production.up.railway.app/rest-api/update.php',
                     type: 'POST',
                     data: formData,
                     contentType: false,

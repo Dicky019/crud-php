@@ -6,7 +6,7 @@ if (isset($_GET['title'])) {
     $post_title = $_GET['title'];
     // ...
 }
-$apiUrl = $post_title != null ? "http://localhost/crud-php/rest-api/read.php?title=$post_title" :  "http://localhost/crud-php/rest-api/read.php"; // Ubah sesuai dengan URL API Anda
+$apiUrl = $post_title != null ? "https://crud-php-production.up.railway.app/rest-api/read.php?title=$post_title" :  "https://crud-php-production.up.railway.app/rest-api/read.php"; // Ubah sesuai dengan URL API Anda
 $response = file_get_contents($apiUrl);
 
 // Mendekode data JSON yang diterima
