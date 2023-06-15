@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'DELETE') :
     exit;
 endif;
 
-require 'database.php';
+require 'Database.php';
 $database = new Database();
 $conn = $database->dbConnection();
 

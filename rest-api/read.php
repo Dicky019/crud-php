@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') :
     exit;
 endif;
 
-require 'database.php';
+require 'Database.php';
 $database = new Database();
 $conn = $database->dbConnection();
 $post_id = null;
